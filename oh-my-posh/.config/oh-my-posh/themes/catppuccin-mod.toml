@@ -1,0 +1,120 @@
+final_space = true
+version = 3
+
+[palette]
+  os = "#ACB0BE"
+  pink = "#F5BDE6"
+  lavender = "#B7BDF8"
+  blue = "#8AADF4"
+  wight = "#FFFFFF"
+  text = "#494D64"
+
+[[blocks]]
+  alignment = "left"
+  type = "prompt"
+  newline = true
+
+  [[blocks.segments]]
+    background = "p:pink"
+    foreground = "p:wight"
+    powerline_symbol = ""
+    leading_diamond = ""
+    style = "diamond"
+    template = "{{.Icon}}"
+    type = "os"
+
+  [[blocks.segments]]
+    background = "p:pink"
+    foreground = "p:text"
+    powerline_symbol = ""
+    style = "powerline"
+    template = "{{ .Path }}"
+    type = "path"
+
+    [blocks.segments.properties]
+      home_icon = "~"
+      style = "letter"
+
+  [[blocks.segments]]
+    background = "p:lavender"
+    foreground = "p:text"
+    style = "powerline"
+    powerline_symbol = ""
+    template = " {{ .HEAD }}"
+    type = "git"
+
+    [blocks.segments.properties]
+      branch_icon = " "
+      cherry_pick_icon = " "
+      commit_icon = " "
+      fetch_status = false
+      fetch_upstream_icon = false
+      merge_icon = " "
+      no_commits_icon = " "
+      rebase_icon = " "
+      revert_icon = " "
+      tag_icon = " "
+
+  [[blocks.segments]]
+    foreground = "green"
+    foreground_templates = [
+    "{{ if or (.Working.Changed) (.Staging.Changed) }}yellow{{ end }}",
+    "{{ if and (gt .Ahead 0) (gt .Behind 0) }}red{{ end }}",
+    "{{ if gt .Ahead 0 }}red{{ end }}",
+    "{{ if gt .Behind 0 }}green{{ end }}"
+  ]
+    style = "plain"
+    template = "{{if .BranchStatus }} {{ .BranchStatus }}{{ end }}{{ if .Working.Changed }}<red>  {{ .Working.String }}</>{{ end }}{{ if and (.Working.Changed) (.Staging.Changed) }} |{{ end }}{{ if .Staging.Changed }}<yellow>  {{ .Staging.String }}</>{{ end }}{{ if gt .StashCount 0 }}  {{ .StashCount }}{{ end }}"
+    type = "git"
+
+    [blocks.segments.properties]
+      fetch_stash_count = true
+      fetch_status = true
+      fetch_upstream_icon = true
+      github_icon = " "
+
+[[blocks]]
+  alignment = "right"
+  type = "prompt"
+
+  [[blocks.segments]]
+    foreground = "white"
+    style = "plain"
+    template = " {{ .FormattedMs }} "
+    type = "executiontime"
+
+    [blocks.segments.properties]
+      style = "round"
+      threshold = 5000
+
+  [[blocks.segments]]
+    foreground = "green"
+    foreground_templates = [ "{{ if gt .Code 0 }}red{{ end }}" ]
+    style = "plain"
+    template = " {{ if gt .Code 0 }}{{else}}{{ end }} "
+    type = "status"
+
+    [blocks.segments.properties]
+      always_enabled = true
+
+[[blocks]]
+  alignment = "left"
+  newline = true
+  type = "prompt"
+
+  [[blocks.segments]]
+    style = "plain"
+    foreground_templates = [
+      "{{if gt .Code 0}}red{{end}}",
+      "{{if eq .Code 0}}magenta{{end}}",
+    ]
+    template = "❯"
+    type = "text"
+
+[transient_prompt]
+  foreground_templates = [
+    "{{if gt .Code 0}}red{{end}}",
+    "{{if eq .Code 0}}magenta{{end}}",
+  ]
+  background = 'transparent'
+  template = '❯ '

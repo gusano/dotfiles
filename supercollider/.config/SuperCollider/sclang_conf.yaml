@@ -1,0 +1,12 @@
+includePaths:
+    -   /home/gusi/dev/sc
+    -   /home/gusi/.local/share/SuperCollider/downloaded-quarks/adclib
+    -   /home/gusi/sc_work
+    -   /home/gusi/dev/gusano/ServerOptionsGui
+    -   /home/gusi/.local/share/SuperCollider/downloaded-quarks/Vowel
+    -   /home/gusi/dev/supercollider/testsuite
+    -   /home/gusi/.local/share/SuperCollider/downloaded-quarks/MathLib
+excludePaths:
+    []
+postInlineWarnings: false
+excludeDefaultPaths: false

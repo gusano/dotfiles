@@ -1,0 +1,46 @@
+IDE:
+  editor:
+    blinkDuration: 600
+    disableBlinkingCursor: false
+    font:
+      antialias: 2
+      family: Ubuntu Mono
+      size: 13
+    highlightBracketContents: true
+    highlightCurrentLine: true
+    inactiveEditorFadeAlpha: 64
+    indentWidth: 2
+    insertMatchingTokens: true
+    lineWrap: true
+    spaceIndent: true
+    stepForwardEvaluation: false
+    theme: dracula
+    useComboBox: false
+    useComboBoxWhenSplitting: false
+  interpreter:
+    autoStart: true
+    configFile: /home/gusi/.config/SuperCollider/sclang_conf.yaml
+    runtimeDir: ""
+    standalone: false
+  mainWindow:
+    detached: !QVariantMap
+      documents-dock: ""
+      help-dock: AAHZ0MsAAwAAAAAAAAAAABQAAAOtAAACCAAAAAAAAAAUAAADrQAAAggAAAAAAgAAAAeAAAAAAAAAABQAAAOtAAACCA==
+      post-dock: ""
+    geometry: AdnQywADAAAAAAAWAAAAFAAAB38AAAQLAAAAFgAAABQAAAd/AAAECwAAAAACAAAAB4AAAAAWAAAAFAAAB38AAAQL
+    state: AAAA/wAAAAD9AAAAAgAAAAAAAADIAAACtPwCAAAAAfsAAAAcAGQAbwBjAHUAbQBlAG4AdABzAC0AZABvAGMAawAAAAAWAAACtAAAAF4A////AAAAAQAAAY0AAAPM/AIAAAAC+wAAABIAaABlAGwAcAAtAGQAbwBjAGsCAAAAAQAAABUAAAPJAAADbvsAAAASAHAAbwBzAHQALQBkAG8AYwBrAQAAABMAAAPMAAAATAD///8AAAXcAAADzAAAAAEAAAACAAAAAQAAAAL8AAAAAA==
+  postWindow:
+    lineWrap: true
+    scrollback: 1000
+  recentDocuments: !QVariantList
+    - /home/gusi/sc-2025/Termite_College-2025.scd
+    - /usr/local/share/SuperCollider/examples/pieces/Termite_College.scd
+    - /home/gusi/sc-2025/fredrik-2025.sc
+    - /home/gusi/sc-2025/twiiits.scd
+    - /home/gusi/sc-2025/tim-walters-new-metal-mistress-time.scd
+    - /home/gusi/sc-2025/tweetsss.scd
+    - /home/gusi/sc-2025/tim-walters-When The Saints Come Crawling Out.scd
+    - /home/gusi/scwork/2015/coolness_Nebenzimmer_Check.scd
+    - /home/gusi/scwork/2015/niceone.scd
+    - /home/gusi/scwork/2019/RollingCan.scd
+  startWithSession: last
