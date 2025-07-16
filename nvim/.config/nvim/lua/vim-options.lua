@@ -12,16 +12,17 @@ vim.opt.hlsearch = false
 vim.opt.incsearch = true
 
 -- Navigate vim panes better
-vim.keymap.set('n', '<c-k>', ':wincmd k<CR>')
-vim.keymap.set('n', '<c-j>', ':wincmd j<CR>')
--- vim.keymap.set('n', '<c-h>', ':wincmd h<CR>')
--- vim.keymap.set('n', '<c-l>', ':wincmd l<CR>')
-vim.keymap.set('n', '<c-h>', '<cmd>BufferLineCyclePrev<CR>')
-vim.keymap.set('n', '<c-l>', '<cmd>BufferLineCycleNext<CR>')
+vim.keymap.set("n", "<c-k>", ":wincmd k<CR>")
+vim.keymap.set("n", "<c-j>", ":wincmd j<CR>")
+vim.keymap.set("n", "<c-h>", "<cmd>BufferLineCyclePrev<CR>")
+vim.keymap.set("n", "<c-l>", "<cmd>BufferLineCycleNext<CR>")
 
-vim.keymap.set('n', '<leader>h', ':nohlsearch<CR>')
+vim.keymap.set("n", "<leader>h", ":nohlsearch<CR>")
 vim.wo.number = true
 
+-- Greatest remaps
+vim.keymap.set("v", "J", ":m '>+1<CR>gv=gv")
+vim.keymap.set("v", "K", ":m '<-2<CR>gv=gv")
 
 -- Disable ESLint LSP server and hide virtual text in Neovim
 -- Add this to your init.lua or init.vim file
@@ -41,13 +42,13 @@ vim.diagnostic.config({
 })
 
 -- Fix for this bug with autotag
-vim.lsp.handlers['textDocument/publishDiagnostics'] = vim.lsp.with(
+vim.lsp.handlers["textDocument/publishDiagnostics"] = vim.lsp.with(
   vim.lsp.diagnostic.on_publish_diagnostics,
   {
     underline = true,
     virtual_text = {
       spacing = 5,
-      severity_limit = 'Warning',
+      severity_limit = "Warning",
     },
     update_in_insert = true,
   }
