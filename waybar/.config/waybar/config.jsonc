@@ -1,10 +1,10 @@
 {
   "layer": "top",
   "position": "top",
-  "spacing": 0,
-  "height": 42,
+  "spacing": 8,
+  "height": 33,
   "modules-left": [
-    "custom/logo",
+    "clock",
     "hyprland/workspaces"
   ],
   "modules-center": [
@@ -16,7 +16,6 @@
     "pulseaudio",
     "network",
     "battery",
-    "clock",
     "custom/power"
   ],
   "custom/weather": {
@@ -53,13 +52,14 @@
   "clock": {
     "tooltip-format": "{calendar}",
     "format-alt": "  {:%a, %d %b %Y}",
-    "format": " {:%H:%M}"
+    "format-BEFORE": "  {:%H:%M}",
+    "format": " {:%H:%M}"
   },
   "tray": {
     "spacing": 10
   },
   "network": {
-    "format-wifi" : "{icon}  {essid}",
+    "format-wifi" : "{icon} {essid}",
     "format-icons": ["󰤯","󰤟","󰤢","󰤥","󰤨"],
     "format-ethernet": "󰀂",
     "format-disconnected" : "󰖪",
@@ -70,23 +70,16 @@
     "interval": 5,
     "nospacing": 1
   },
-  "custom/logo": {
-    "format": "  ",
-    "tooltip": false,
-    "on-click": "~/.config/rofi/launchers/misc/launcher.sh &"
-  },
   "pulseaudio": {
     "format": "{icon} {volume}%",
-    "format-muted": "",
+    "format-bluetooth": " {volume}%",
+    "format-bluetooth-muted": " 󰝟",
+    "format-muted": "󰝟",
     "format-icons": {
-      "default-BUG": ["", "", ""],
-      "default": ["", "", ""]
+      "headphone": "",
+      "phone": "",
+      "default": ["", "", ""]
     },
-    "format-icons-BUG": [
-      "",
-      "",
-      ""
-    ],
     "on-click": "pavucontrol"
   },
   "battery": {
@@ -126,7 +119,7 @@
     "tooltip": false
   },
   "custom/power": {
-    "format": " 󰤆 ",
+    "format": "",
     "tooltip": false,
     "on-click": "~/.config/rofi/powermenu/type-2/powermenu.sh &"
   }
