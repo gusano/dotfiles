@@ -8,6 +8,9 @@ export ZSH=/home/gusi/.oh-my-zsh
 
 DEFAULT_USER=gusi
 
+# Env vars
+source $HOME/.zsh_env_vars
+
 # Uncomment the following line to use case-sensitive completion.
 # CASE_SENSITIVE="true"
 
