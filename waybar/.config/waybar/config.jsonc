@@ -51,9 +51,8 @@
   },
   "clock": {
     "tooltip-format": "{calendar}",
-    "format-alt": "  {:%a, %d %b %Y}",
-    "format-BEFORE": "  {:%H:%M}",
-    "format": " {:%H:%M}"
+    "format-alt": " {:%a, %d %b %Y}",
+    "format": " {:%H:%M}",
   },
   "tray": {
     "spacing": 10
